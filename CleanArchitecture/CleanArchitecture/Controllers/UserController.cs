@@ -31,12 +31,10 @@ namespace CleanArchitecture.Controllers
             return Ok(result);
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("CreateUser")]
-        public async Task<IActionResult> CreateUser(string userName, string nickName)
+        public async Task<IActionResult> CreateUser(InsertUserCommand cmd)
         {
-            InsertUserCommand cmd = new InsertUserCommand() { UserName = userName, NickName = nickName };
-
             var result = await _mediator.Send(cmd);
             return Ok(result);
         }

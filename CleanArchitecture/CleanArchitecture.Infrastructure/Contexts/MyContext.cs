@@ -17,5 +17,6 @@ namespace CleanArchitecture.Infrastructure.Contexts
         public IConfiguration Configuration { get; }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<UserHistory> UserHistories {get;set;}
     }
 }

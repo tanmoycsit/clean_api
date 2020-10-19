@@ -15,6 +15,7 @@ namespace CleanArchitecture.Infrastructure.IoC
         {
             //CleanArchitecture.Application
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserHistoryRepository, UserHistoryRepository>();
 
             //CleanArchitecture.Domain.Interfaces | CleanArchitecture.Infra.Data.Repositories
             services.AddScoped<IUnitOfWork, UnitOfWork>();
